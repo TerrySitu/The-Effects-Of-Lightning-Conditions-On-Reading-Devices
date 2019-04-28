@@ -2,8 +2,6 @@
 ### math 285 final ###
 ######################
 
-
-#### input data ####
 #### input data ####
 # install.packages("RCurl")
 library(RCurl)
