@@ -4,8 +4,12 @@
 
 
 #### input data ####
-setwd("/Users/terrysitu/Dropbox/Stat MS Classes/Regression Modeling/Data")
-data <- read.table("e_reading.txt", header=F)
+#### input data ####
+# install.packages("RCurl")
+library(RCurl)
+datafile <- getURL("https://raw.githubusercontent.com/TerrySitu/The-Effects-Of-Lightning-Conditions-On-Reading-Devices/master/e_reading.txt")
+
+data <- read.table(text = datafile, header=F)
 head(data)
 colnames(data) <- c("devices", "lightning", "reading")
 data
